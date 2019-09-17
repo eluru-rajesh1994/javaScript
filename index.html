@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calendar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+    <script type="text/javascript" src="script.js"></script>
+
+    <div rules="cols" id="calendar-container">
+
+        <div id="calendar-header">
+            <div class="form-inline">
+                <button class="btn btn-outline-primary col-sm-6" onclick="previousYear()">
+                    <img height="8" width="8" src="/Users/rajesh-9365/Desktop/double_left.png"> </button>
+
+                <button class="btn btn-outline-primary col-sm-6" onclick="previous()">
+                    <img height="8" width="8" src="/Users/rajesh-9365/Desktop/left.png"> </button>
+                <span id="calendar-month-year"></span>
+                <button class="btn btn-outline-primary col-sm-6" onclick="next()">
+                    <img height="8" width="8" src="/Users/rajesh-9365/Desktop/right.png"> </button>
+
+                <button class="btn btn-outline-primary col-sm-6" onclick="nextYear()">
+                    <img height="8" width="8" src="/Users/rajesh-9365/Desktop/double_right.png"> </button>
+
+
+            </div>
+            <br />
+
+
+        </div>
+        <div id="calendar-dates" onmousemove="mouseOverFun()" onfocus="myFunction()" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        </div>
+    </div>
+    <div>
+
+        <p>
+            selected dates are : <span id="seldate"></span>
+        </p>
+        <br/>
+
+    </div>
+    <div class="slidecontainer">
+        <p>Select your month </p>
+        <br/>
+        <input type="range" min="1" max="12" class="slider" id="myRange" onclick="sliderChange()">
+        <p>Month: <span id="demo"></span></p>
+    </div>
+    <div class="slidecontainer">
+        <p>Select your year </p>
+        <br/>
+        <input type="range" class="slider" id="myRangeYear" onclick="sliderChange()">
+        <p>Year: <span id="year_val"></span></p>
+    </div>
+    <div class="slidecontainer">
+        <p>Select your Day </p>
+        <br/>
+        <input type="range" min="1" class="slider" id="myRangeDay" onclick="sliderChange()">
+        <p>Day: <span id="day_val"></span></p>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
